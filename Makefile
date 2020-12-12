@@ -6,3 +6,4 @@ all:
 install: all
 	make
 	bash install.bin
+	rm install.bin

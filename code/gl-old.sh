@@ -78,6 +78,7 @@ home3;;
 home4;;
 music)music;;
 #010)python ~/.gl/termux-api-command.py;;
+ungl)ungl;;
 *)
 echo '啊这，主人，好像没有这个选项诶！Ծ ̮ Ծ'
 sleep 1
@@ -307,7 +308,7 @@ music;;
 esac
 }
 
-uninstall (){
+ungl (){
 rm -r $HOME/.gl
 rm $PREFIX/bin/gl
 rm $PREFIX/bin/glo
@@ -316,18 +317,17 @@ rm $PREFIX/bin/vahb
 }
 
 update (){
-cd ~
-wget https://gl.gulanguage.cn/config.gl
-wget https://gl.gulanguage.cn/gl.sh
-wget https://gl.gulanguage.cn/gl-old.sh
-wget https://gl.gulanguage.cn/xml2ass.sh
-wget https://gl.gulanguage.cn/vahb.sh
-wget https://gl.gulanguage.cn/danmaku2ass.py
-wget https://gl.gulanguage.cn/termux-api-command.py
-mkdir .gl
-mv config.gl ~/.gl
-mv danmaku2ass.py ~/.gl/
-mv termux-api-command.py ~/.gl/
+wget https://gl.gulanguage.cn/code/config.gl
+wget https://gl.gulanguage.cn/code/gl.sh
+wget https://gl.gulanguage.cn/code/gl-old.sh
+wget https://gl.gulanguage.cn/code/xml2ass.sh
+wget https://gl.gulanguage.cn/code/vahb.sh
+wget https://gl.gulanguage.cn/code/danmaku2ass.py
+wget https://gl.gulanguage.cn/code/termux-api-command.py
+mkdir $HOME/.gl
+mv config.gl $HOME/.gl
+mv danmaku2ass.py $HOME/.gl/
+mv termux-api-command.py $HOME/.gl/
 mv gl.sh $PREFIX/bin/gl
 mv gl-old.sh $PREFIX/bin/glo
 mv xml2ass.sh $PREFIX/bin/xml2ass

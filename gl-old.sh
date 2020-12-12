@@ -296,41 +296,23 @@ cat $PREFIX/etc/motd;;
 clear
 home0;;
 1)
-wget "http://api.funs.ml/lzy/api.php?url=i49NLjb46di&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=i49NLjb46di&type=down";;
 2)
-wget "http://api.funs.ml/lzy/api.php?url=icWcrjb46fa&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=icWcrjb46fa&type=down";;
 3)
-wget "http://api.funs.ml/lzy/api.php?url=iEkVgjb46lg&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=iEkVgjb46lg&type=down";;
 4)
-wget "http://api.funs.ml/lzy/api.php?url=iLMoFjb46pa&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=iLMoFjb46pa&type=down";;
 5)
-wget "http://api.funs.ml/lzy/api.php?url=iENO9jb46te&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=iENO9jb46te&type=down";;
 6)
-wget "http://api.funs.ml/lzy/api.php?url=iJHuljb46za&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=iJHuljb46za&type=down";;
 7)
-wget "http://api.funs.ml/lzy/api.php?url=i3VN2jb470b&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=i3VN2jb470b&type=down";;
 8)
-wget "http://api.funs.ml/lzy/api.php?url=iGxZgjb471c&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=iGxZgjb471c&type=down";;
 9)
-wget "http://api.funs.ml/lzy/api.php?url=iIzgzjb472d&type=down" -O $cmd.mp3
-play $cmd.mp3
-rm $cmd.mp3;;
+play -t mp3 "http://api.funs.ml/lzy/api.php?url=iIzgzjb472d&type=down";;
 *)
 echo "错误或你未输入，可以输入1~9！";
 music;;

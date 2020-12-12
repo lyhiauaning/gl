@@ -70,19 +70,7 @@ home1;;
 006)
 home2;;
 007)
-cd ~
-#rm $PREFIX/bin/gl
-wget https://gl.gulanguage.cn/gl
-wget https://gl.gulanguage.cn/danmaku2ass.py
-wget https://gl.gulanguage.cn/termux-api-command.py
-mkdir .gl
-mv danmaku2ass.py ~/.gl/
-mv termux-api-command.py ~/.gl/
-mv gl $PREFIX/bin/gl
-chmod +x $PREFIX/bin/gl
-echo '更新完成'
-sleep 1
-clear
+update
 home0;;
 008)
 home3;;
@@ -317,6 +305,40 @@ play -t mp3 "http://api.funs.ml/lzy/api.php?url=iIzgzjb472d&type=down";;
 echo "错误或你未输入，可以输入1~9！";
 music;;
 esac
+}
+
+uninstall (){
+rm -r $HOME/.gl
+rm $PREFIX/bin/gl
+rm $PREFIX/bin/glo
+rm $PREFIX/bin/xml2ass
+rm $PREFIX/bin/vahb
+}
+
+update (){
+cd ~
+wget https://gl.gulanguage.cn/config.gl
+wget https://gl.gulanguage.cn/gl.sh
+wget https://gl.gulanguage.cn/gl-old.sh
+wget https://gl.gulanguage.cn/xml2ass.sh
+wget https://gl.gulanguage.cn/vahb.sh
+wget https://gl.gulanguage.cn/danmaku2ass.py
+wget https://gl.gulanguage.cn/termux-api-command.py
+mkdir .gl
+mv config.gl ~/.gl
+mv danmaku2ass.py ~/.gl/
+mv termux-api-command.py ~/.gl/
+mv gl.sh $PREFIX/bin/gl
+mv gl-old.sh $PREFIX/bin/glo
+mv xml2ass.sh $PREFIX/bin/xml2ass
+mv vahb.sh $PREFIX/bin/vahb
+chmod +x $PREFIX/bin/gl
+chmod +x $PREFIX/bin/glo
+chmod +x $PREFIX/bin/xml2ass
+chmod +x $PREFIX/bin/vahb
+echo '更新完成'
+sleep 1
+clear
 }
 
 logo;

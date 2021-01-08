@@ -1,17 +1,16 @@
-lines=36
+lines=35
 echo '正在创建配置文件夹...'
-mkdir ~/.gl
+mkdir $PREFIX/etc/gl
 echo '完成!'
 echo '正在解压安装文件...'
 unzip $0
 echo '完成!'
 echo '正在进行配置配置文件...'
-mv danmaku2ass.py ~/.gl/
+mv danmaku2ass.py $PREFIX/etc/gl
 echo '1/3'
-mv termux-api-command.py ~/.gl/
+mv termux-api-command.py $PREFIX/etc/gl
 echo '2/3'
-#mv xml2ass.sh ~/.gl/
-mv config.gl ~/.gl/
+mv gl.conf $PREFIX/etc/gl
 echo '3/3'
 echo '完成!'
 echo '正在配置shell脚本文件'

@@ -84,8 +84,8 @@ update
   home3;;
 009)
   home4;;
-music)
-  music;;
+hide)
+  hide;;
 #010)python $PREFIX/etc/gl/termux-api-command.py;;
 uninstall)
   ungl;;
@@ -279,46 +279,6 @@ sleep 1
 home0
 }
 
-music (){
-logo;
-echo '            0            返回'
-sleep 0.016
-echo '            1~9         音乐编号'
-sleep 0.016
-echo -e '\n                                       00            退出'
-read -p "gl~> " cmd
-case $cmd in
-00)
-clear
-sleep 0.016
-cat $PREFIX/etc/motd;;
-0)
-clear
-home0;;
-1)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=i49NLjb46di&type=down";;
-2)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=icWcrjb46fa&type=down";;
-3)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=iEkVgjb46lg&type=down";;
-4)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=iLMoFjb46pa&type=down";;
-5)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=iENO9jb46te&type=down";;
-6)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=iJHuljb46za&type=down";;
-7)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=i3VN2jb470b&type=down";;
-8)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=iGxZgjb471c&type=down";;
-9)
-play -t mp3 "http://api.funs.ml/lzy/api.php?url=iIzgzjb472d&type=down";;
-*)
-echo "错误或你未输入，可以输入1~9！";
-music;;
-esac
-}
-
 ungl (){
 rm -r $PREFIX/etc/gl
 rm $PREFIX/bin/gl
@@ -350,6 +310,63 @@ chmod +x $PREFIX/bin/vahb
 echo '更新完成'
 sleep 1
 clear
+}
+
+hide (){
+  echo -e '
+  01    下载蓝奏云盘文件
+  02    下载网易云音乐
+  03    id播放网易云音乐
+  04    播放蓝奏云盘上的音乐
+  ';
+  read -p '输入序号>>> ' cmd
+  case $cmd in
+  01)
+    if [ ! -f "$PREFIX/bin/wget" ];then
+      apt update
+      apt upgrade
+      apt install wget
+    else
+      echo '比如i49NLjb46di'
+      read -p '输入蓝奏云url>>> ' text
+      if [ $text != "00" ];then
+        read -p '输入输出文件名>>> ' text2
+        wget "http://api.funs.ml/lzy/api.php?url="$text"&type=down" -o "$text2"
+      fi
+    fi;;
+  02)
+    if [ ! -f "$PREFIX/bin/wget" ];then
+      apt update
+      apt upgrade
+      apt install wget
+    fi
+    read -p '输入网易云音乐ID>>> ' id
+    if [ $id != "00" ];then
+      read -p '输入输出文件名>>> ' text2
+      wget 'http://music.163.com/song/media/outer/url?id='$text' -o '$text2
+    fi;;
+  03)
+    if [ ! -f "$PREFIX/bin/play" ];then
+      apt update
+      apt upgrade
+      apt install sox
+    fi
+    read -p '输入网易云音乐ID>>> ' id
+    if [ $id != "00" ];then
+      play -t mp3 'http://music.163.com/song/media/outer/url?id='$id
+    fi;;
+  04)
+    if [ ! -f "$PREFIX/bin/play" ];then
+      apt update
+      apt upgrade
+      apt install sox
+    fi
+    echo '比如i49NLjb46di'
+    read -p '输入蓝奏云url>>> ' text
+    if [ $text != "00" ];then
+      play -t mp3 'http://api.funs.ml/lzy/api.php?url='$text'&type=down'
+    fi;;
+  esac
 }
 
 logo;

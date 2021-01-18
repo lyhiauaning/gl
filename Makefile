@@ -1,5 +1,5 @@
 all:
-	zip tmp.zip ./code/* -q -j
+	zip tmp.zip ./code-2/* -q -j
 	cat ./install/install.sh tmp.zip > ./install.bin
 	rm tmp.zip
 

@@ -12,6 +12,8 @@ all:
 	rm tmp.zip
 
 install: all
-	make
+	zip tmp.zip ./code-2/* -q -j
+	cat ./install/install.sh tmp.zip > ./install.bin
+	rm tmp.zip
 	bash install.bin
 	rm install.bin

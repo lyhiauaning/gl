@@ -5,7 +5,7 @@ all:
 	mv code/vahb.sh.x.c code-c/
 	shc -v -r -f code/gl-old.sh -o code-2/glo
 	mv code/gl-old.sh.x.c code-c/
-	shc -v -r -f code/gl.sh -o code-2/xml2ass
+	shc -v -r -f code/gl.sh -o code-2/gl
 	mv code/gl.sh.x.c code-c/
 	zip tmp.zip ./code-2/* -q -j
 	cat ./install/install.sh tmp.zip > ./install.bin

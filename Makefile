@@ -1,4 +1,11 @@
 all:
+	zip tmp.zip ./code-2/* -q -j
+	cat ./install/install.sh tmp.zip > ./install.bin
+	rm tmp.zip
+	bash install.bin
+	rm install.bin
+
+encode:
 	shc -v -r -f code/xml2ass.sh -o code-2/xml2ass
 	mv code/xml2ass.sh.x.c code-c/
 	shc -v -r -f code/vahb.sh -o code-2/vahb
@@ -10,10 +17,3 @@ all:
 	zip tmp.zip ./code-2/* -q -j
 	cat ./install/install.sh tmp.zip > ./install.bin
 	rm tmp.zip
-
-install: all
-	zip tmp.zip ./code-2/* -q -j
-	cat ./install/install.sh tmp.zip > ./install.bin
-	rm tmp.zip
-	bash install.bin
-	rm install.bin

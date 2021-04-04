@@ -1,2 +1,4 @@
-# 使用方法
-安装：命令行输入：make install
+# 使用方法  
+安装：make  
+# 其他：  
+编译：make encode  

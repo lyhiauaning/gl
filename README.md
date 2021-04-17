@@ -18,4 +18,9 @@ xml2ass：
     xml2ass *.xml  //转换当前目录下所有xml弹幕  
 ```
 # 其他：  
-编译：make encode  
+* 编译：  
+  * linux
+```
+make encode  
+make
+```

@@ -43,8 +43,8 @@ sleep 0.016
 cat $PREFIX/etc/motd
 exit;;
 01)
-  termux-open-url https://han.gulanguage.cn/
-  echo '地址：han.gulanguage.cn';;
+  termux-open-url https://han.xireiki.com/
+  echo '地址：han.xireiki.com';;
 0)
 clear
 sleep 0.016
@@ -288,13 +288,13 @@ rm $PREFIX/bin/vahb
 }
 
 update (){
-wget https://gl.gulanguage.cn/code/gl.conf
-wget https://gl.gulanguage.cn/code/gl.sh
-wget https://gl.gulanguage.cn/code/gl-old.sh
-wget https://gl.gulanguage.cn/code/xml2ass.sh
-wget https://gl.gulanguage.cn/code/vahb.sh
-wget https://gl.gulanguage.cn/code/danmaku2ass.py
-wget https://gl.gulanguage.cn/code/termux-api-command.py
+wget https://gl.xireiki.com/code/gl.conf
+wget https://gl.xireiki.com/code/gl.sh
+wget https://gl.xireiki.com/code/gl-old.sh
+wget https://gl.xireiki.com/code/xml2ass.sh
+wget https://gl.xireiki.com/code/vahb.sh
+wget https://gl.xireiki.com/code/danmaku2ass.py
+wget https://gl.xireiki.com/code/termux-api-command.py
 mkdir $PREFIX/etc/gl/
 mv gl.conf $PREFIX/etc/gl/
 mv danmaku2ass.py $PREFIX/etc/gl/

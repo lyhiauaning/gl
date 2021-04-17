@@ -1,4 +1,3 @@
-lines=35
 echo '正在创建配置文件夹...'
 mkdir $PREFIX/etc/gl
 echo '完成!'

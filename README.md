@@ -20,7 +20,7 @@ xml2ass：
 # 其他：  
 * 编译：  
   * termux
-```
+```sh
 make encode  
 make
 ```

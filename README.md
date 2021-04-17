@@ -7,7 +7,7 @@
 make  
 ```
 * 使用：  
-```
+```sh
 gl  #查看帮助  
 glo  #旧版菜单  
 vahb [-a] [input audio file] [-v] [input video file] [-o] [output file]  #合并视频和音频  

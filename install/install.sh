@@ -6,11 +6,9 @@ unzip $0
 echo '完成!'
 echo '正在进行配置配置文件...'
 mv danmaku2ass $PREFIX/etc/gl
-echo '1/3'
-mv termux-api-command.py $PREFIX/etc/gl
-echo '2/3'
+echo '1/2'
 mv gl.conf $PREFIX/etc/gl
-echo '3/3'
+echo '1/2'
 echo '完成!'
 echo '正在配置shell脚本文件'
 mv gl $PREFIX/bin/gl

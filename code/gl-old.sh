@@ -196,7 +196,7 @@ echo '我还没做呢，等待更新吧！'
 sleep 1
 home3;;
 2)
-echo "extra-keys = [['\"','=','+','.',',','|','?'],['ALT','{','<','&','>','}','BACKSLASH'],['TAB','#','-','~','/','*','$'],['ESC','(','HOME','UP','END',')','PGUP'],['CTRL','[','LEFT','DOWN','RIGHT',']','PGDN']]" > ~/.termux/termux.properties
+echo "extra-keys = [['\"','+','-','×','÷','\|','?'],['=','{','\<','&','\>','}','\;'],['TAB','\`','BACKSLASH','~','/','^','\$'],['ESC','\(','HOME','UP','END','\)','PGUP'],['CTRL','[','LEFT','DOWN','RIGHT',']','PGDN']]" > ~/.termux/termux.properties
 termux-reload-settings
 echo '修改完成,可能被压缩键盘,需要重启'
 sleep 1

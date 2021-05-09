@@ -14,7 +14,7 @@ encode:
 	
 
 install: encode 
-	@if [[ ! -d "${PREFIX}/etc/gl" ]];then mkdir ${PREFIX}/etc/gl ; fi
+	@if [ ! -d "${PREFIX}/etc/gl" ];then mkdir ${PREFIX}/etc/gl ; fi
 	unzip gl.zip
 	mv danmaku2ass ${PREFIX}/etc/gl
 	mv gl.conf ${PREFIX}/etc/gl
@@ -32,3 +32,10 @@ install: encode
 	@if [ ! -f "${PREFIX}/bin/jq" ];then apt install jq -y ; fi
 	rm gl.zip
 	@echo "Installation of GL is complete!"
+
+remove:
+	@rm -rf ${PREFIX}/etc/gl
+	@rm ${PREFIX}/bin/gl
+	@rm ${PREFIX}/bin/glo
+	@rm ${PREFIX}/bin/xml2ass
+	@rm ${PREFIX}/bin/vahb
